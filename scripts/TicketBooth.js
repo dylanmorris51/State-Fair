@@ -9,7 +9,7 @@ eventHub.addEventListener("click", event => {
             }
         })
         eventHub.dispatchEvent(rideTicketEvent)
-        // console.log("Ride Button Clicked, event dispatched")
+        console.log("Ride Button Clicked, event dispatched")
     }
 })
 
