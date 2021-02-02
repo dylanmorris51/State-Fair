@@ -9,6 +9,9 @@ export const TicketBooth = () => {
         <div class="ticketBooth">
             <button id="foodTicket">Food Ticket</button>
         </div>
+        <div class="ticketBooth">
+            <button id="gameTicket">Game Ticket</button>
+        </div>
     `
 }
 
@@ -30,5 +33,14 @@ eventHub.addEventListener("click", event => {
         const foodTicketEvent = new CustomEvent("foodTicketPurchased")
         eventHub.dispatchEvent(foodTicketEvent)
         console.log("Food Button clicked, Event Dispatched")
+    }
+})
+
+
+eventHub.addEventListener("click", event => {
+    if (event.target.id === "gameTicket") {
+        const gameTicketEvent = new CustomEvent("gameTicketPurchased")
+        eventHub.dispatchEvent(gameTicketEvent)
+        console.log("Game Button clicked, Event Dispatched")
     }
 })
