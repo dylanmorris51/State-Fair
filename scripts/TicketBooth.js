@@ -19,39 +19,11 @@ export const TicketBooth = () => {
 }
 
 eventHub.addEventListener("click", event => {
-    if (event.target.id === "rideTicket") {
-        const rideTicketEvent = new CustomEvent("rideTicketPurchased", {
-            detail: {
-                ticketPurchased: true 
-            }
-        })
-        eventHub.dispatchEvent(rideTicketEvent)
-        console.log("Ride Button Clicked, Event Dispatched")
+    const clickedEvent = event.target.id
+    if (clickedEvent === "rideTicket" || "foodTicket" || "gameTicket" || "sideshowTicket") {
+        // debugger
+        const customEvent = new CustomEvent(`${clickedEvent}Clicked`)
+        eventHub.dispatchEvent(customEvent)
     }
 })
 
-
-eventHub.addEventListener("click", event => {
-    if (event.target.id === "foodTicket") {
-        const foodTicketEvent = new CustomEvent("foodTicketPurchased")
-        eventHub.dispatchEvent(foodTicketEvent)
-        console.log("Food Button clicked, Event Dispatched")
-    }
-})
-
-
-eventHub.addEventListener("click", event => {
-    if (event.target.id === "gameTicket") {
-        const gameTicketEvent = new CustomEvent("gameTicketPurchased")
-        eventHub.dispatchEvent(gameTicketEvent)
-        console.log("Game Button clicked, Event Dispatched")
-    }
-})
-
-eventHub.addEventListener("click", event => {
-    if (event.target.id === "sideshowTicket") {
-        const sideshowTicketEvent = new CustomEvent("sideshowTicketPurchased")
-        eventHub.dispatchEvent(sideshowTicketEvent)
-        console.log("Sideshow Button clicked, Event Dispatched")
-    }
-})
