@@ -6,6 +6,7 @@ import { RideTicketHolders } from "./rides/RideTicketHolders.js";
 import { SideshowTicketHolders } from "./sideshows/SideshowTicketHolder.js";
 import { TicketBooth } from "./TicketBooth.js";
 
+
 TicketBooth()
 // RideTicketHolders()
 // FoodTicketHolders()

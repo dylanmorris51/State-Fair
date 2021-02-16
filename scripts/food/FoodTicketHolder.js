@@ -8,3 +8,12 @@ export const FoodTicketHolders = () => {
 }   
 
 eventHub.addEventListener("foodTicketClicked", FoodTicketHolders)
+
+export const FullPackageTicketHolders = () => {
+    // debugger
+    contentTarget.innerHTML += `
+    <div class="person bigSpender"></div>
+    `
+}   
+
+eventHub.addEventListener("fullPackageTicketClicked", FullPackageTicketHolders)
