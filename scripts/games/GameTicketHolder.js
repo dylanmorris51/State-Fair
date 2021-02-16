@@ -9,11 +9,11 @@ export const GameTicketHolders = () => {
 
 eventHub.addEventListener("gameTicketClicked", GameTicketHolders)
 
-export const FullPackageTicketHolders = () => {
-    // debugger
-    contentTarget.innerHTML += `
-    <div class="person bigSpender"></div>
-    `
-}   
+// export const FullPackageTicketHolders = () => {
+//     // debugger
+//     contentTarget.innerHTML += `
+//     <div class="person bigSpender"></div>
+//     `
+// }   
 
-eventHub.addEventListener("fullPackageTicketClicked", FullPackageTicketHolders)
+// eventHub.addEventListener("fullPackageTicketClicked", FullPackageTicketHolders)
