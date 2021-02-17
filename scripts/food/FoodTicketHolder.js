@@ -2,11 +2,18 @@ const contentTarget = document.querySelector(".food")
 const eventHub = document.querySelector("#state-fair")
 
 export const FoodTicketHolders = () => {
-    eventHub.addEventListener("foodTicketPurchased", event => {
-        contentTarget.innerHTML += `
-        <div class="person"></div>
-        <div class="eater"></div>
-        `
-        console.log("Food Ticket Holder reacted to the click")
-    })   
-}
+    contentTarget.innerHTML += `
+    <div class="person eater"></div>
+    `
+}   
+
+eventHub.addEventListener("foodTicketClicked", FoodTicketHolders)
+
+// export const FullPackageTicketHolders = () => {
+//     // debugger
+//     contentTarget.innerHTML += `
+//     <div class="person bigSpender"></div>
+//     `
+// }   
+
+// eventHub.addEventListener("fullPackageTicketClicked", FullPackageTicketHolders)

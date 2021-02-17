@@ -1,12 +1,21 @@
 const contentTarget = document.querySelector(".sideshow")
 const eventHub = document.querySelector("#state-fair")
 
+
+
 export const SideshowTicketHolders = () => {
-    eventHub.addEventListener("sideshowTicketPurchased", customEvent => {
-        contentTarget.innerHTML += `
-        <div class="person"></div>
-        <div class="rider"></div>
-        `
-        console.log("SideshowTicketHolder component reacted to the click event")
-    })
+    contentTarget.innerHTML += `
+    <div class="person gawker"></div>
+    `
 }
+eventHub.addEventListener("sideshowTicketClicked", SideshowTicketHolders)
+
+
+// export const FullPackageTicketHolders = () => {
+//     // debugger
+//     contentTarget.innerHTML += `
+//     <div class="person bigSpender"></div>
+//     `
+// }   
+
+// eventHub.addEventListener("fullPackageTicketClicked", FullPackageTicketHolders)

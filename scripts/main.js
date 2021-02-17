@@ -5,9 +5,11 @@ import { GameTicketHolders } from "./games/GameTicketHolder.js";
 import { RideTicketHolders } from "./rides/RideTicketHolders.js";
 import { SideshowTicketHolders } from "./sideshows/SideshowTicketHolder.js";
 import { TicketBooth } from "./TicketBooth.js";
+import './fullPackage/FullPackageTicketHolder.js'
+
 
 TicketBooth()
-RideTicketHolders()
-FoodTicketHolders()
-GameTicketHolders()
-SideshowTicketHolders()
+// RideTicketHolders()
+// FoodTicketHolders()
+// GameTicketHolders()
+// SideshowTicketHolders()
